@@ -8,8 +8,10 @@ const ProgressBar = ({ value = 0 }) => {
     },[value])
   return (
     <div className="progress">
-      <span>{percent.toFixed()}%</span>
-      <div></div>
+      <span
+      style={{color: percent > 53 ? "white" : "black"}}
+      >{percent.toFixed()}%</span>
+      <div style={{width: `${percent}%`}} role="progressbar" ></div>
     </div>
   );
 };
