@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="app">
       <span>Progress Bar</span>
-      <ProgressBar value={value} />
+      <ProgressBar value={value} onComplete={() => console.log("complete")} />
     </div>
   );
 };
